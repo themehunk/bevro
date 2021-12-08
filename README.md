@@ -1,2 +1,0 @@
-# bevro
-elementor theme
