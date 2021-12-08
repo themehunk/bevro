@@ -2,9 +2,9 @@
 Contributors: ThemeHunk
 Tags: two-columns, right-sidebar, custom-menu, custom-background, editor-style, translation-ready, full-width-template, flexible-header, sticky-post, theme-options, one-column, e-commerce, blog, photography, threaded-comments, custom-colors
 Requires at least: 4.9
-Tested up to: 5.7
+Tested up to: 5.8.2
 Requires PHP: 5.2.4
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv3 or later
 License URL: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -21,6 +21,11 @@ Yes our theme supports builder
 Yes, this theme is tested with latest version of WordPress, you can use it for your site.
 
 == Changelog ==
+
+= 1.0.7=
+* Th option panel updated.
+* Child theme notification added.
+
 = 1.0.6=
 * Wordpress 5.7 localize issue fixed.
 
@@ -51,6 +56,9 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 Initial release
 
 == Upgrade Notice ==
+= 1.0.7=
+* Th option panel updated.
+* Child theme notification added.
 
 = 1.0.0 =
 Theme released
