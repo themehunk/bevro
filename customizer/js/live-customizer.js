@@ -4,7 +4,7 @@
  * here. Your javascript should grab settings from customizer controls, and 
  * then make any necessary changes to the page using jQuery.
  */
-( function( jQuery ){
+( function( $ ){
 /**
  * Dynamic Internal/Embedded Style for a Control
  */
@@ -410,8 +410,8 @@ bevro_css( 'bevro_link_hvr_clr','color','a:hover,.single .nav-previous:hover:bef
 bevro_css( 'bevro_theme_clr','color','.blog article .entry-content p:first-child:first-letter,.blog article .entry-content p:first-child:first-letter,a:hover,.inifiniteLoader,mark,.single .nav-previous:hover:before,.single .nav-next:hover:after,.page-numbers.current, .page-numbers:hover, .prev.page-numbers:hover, .next.page-numbers:hover,.bevro-load-more #load-more-posts:hover,.mhdrleftpan .header-pan-icon span,.mhdrrightpan .header-pan-icon span,article h2.entry-title a:hover,.bevro-menu li a:hover,.main-header .bevro-menu > li > a:hover,a:hover,.single .nav-previous:hover:before,.single .nav-next:hover:after,article h2.entry-title a:hover,.bevro-menu li a:hover,.main-header .bevro-menu > li > a:hover,.main-header .main-header-bar a:hover, .bevro-menu .content-social .social-icon li a:hover,.top-header .top-header-bar a:hover,.bottom-header .bottom-header-bar a:hover,.top-footer .top-footer-bar a:hover,.bottom-footer .bottom-footer-bar a:hover');
 wp.customize( 'bevro_theme_clr', function( value ){
         value.bind( function( newval ) {
-            $('.menu-custom-html > a button,.read-more .brv-button,button,.woocommerce #respond input#submit, .woocommerce a.button,.woocommerce button.button, .woocommerce input.button,.menu-custom-html > a button, .read-more .brv-button, #respond.comment-respond #submit, button,.brv-date-meta .posted-on,.woocommerce ul.products li.product .onsale, .woocommerce span.onsale,.woocommerce .widget_price_filter .ui-slider .ui-slider-range,.woocommerce .widget_price_filter .ui-slider .ui-slider-handle,.cart-contents .cart-crl,.main-header .main-header-bar a.main-header-btn,.page-numbers,.next.page-numbers, .prev.page-numbers').css('background', newval );
-            $('.menu-custom-html > a button, .read-more .brv-button, #respond.comment-respond #submit, button,.main-header .main-header-bar a.main-header-btn,.page-numbers,.next.page-numbers, .prev.page-numbers').css('border-color', newval );
+            jQuery('.menu-custom-html > a button,.read-more .brv-button,button,.woocommerce #respond input#submit, .woocommerce a.button,.woocommerce button.button, .woocommerce input.button,.menu-custom-html > a button, .read-more .brv-button, #respond.comment-respond #submit, button,.brv-date-meta .posted-on,.woocommerce ul.products li.product .onsale, .woocommerce span.onsale,.woocommerce .widget_price_filter .ui-slider .ui-slider-range,.woocommerce .widget_price_filter .ui-slider .ui-slider-handle,.cart-contents .cart-crl,.main-header .main-header-bar a.main-header-btn,.page-numbers,.next.page-numbers, .prev.page-numbers').css('background', newval );
+            jQuery('.menu-custom-html > a button, .read-more .brv-button, #respond.comment-respond #submit, button,.main-header .main-header-bar a.main-header-btn,.page-numbers,.next.page-numbers, .prev.page-numbers').css('border-color', newval );
         } );
     } );
 

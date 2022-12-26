@@ -5,10 +5,10 @@ Theme URI: https://themehunk.com/product/bevro-wordpress-theme/
 Author URI: https://www.themehunk.com
 Description: Bevro is a best multipurpose theme for your project. Best suitable for creating Small Business, Agency, eCommerce, Portfolio sites. It is best Base theme you have ever used. It is compatible with Elementor, Brizy, Beaver, Visual compser etc. Bervo provide full control over header, footer, blog, color& background, Typography, woocommerce and much more. Theme comes with one click Demo import. Facing any difficulty in using theme just contact our support forum: https://www.themehunk.com/support , Check our Demos of Bevro: https://themehunk.com/bevro-wordpress-theme/
 For more information about Bevro please go to : https://themehunk.com
-Version: 1.0.6
+Version: 1.0.7
 Requires at least: 4.5
-Tested up to: 5.7
-Requires PHP: 5.2.4
+Tested up to: 6.1
+Requires PHP: 5.4
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 Tags: two-columns, right-sidebar, custom-menu, custom-background, editor-style, translation-ready, full-width-template, flexible-header, sticky-post, theme-options, one-column, e-commerce, blog, photography, threaded-comments, custom-colors
@@ -4235,7 +4235,7 @@ border-radius: 2px;
 }
 #move-to-top{
     right: 30px;
-    bottom: 30px;
+    bottom: 152px;
 }
 #move-to-top:not(.filling){
     opacity: 0;
@@ -4325,6 +4325,8 @@ padding:15px 30px;
 cursor: pointer;
 border:0;
 color: #fff;
+margin-top: 0;
+margin-bottom: 0;
 }
 [type="submit"]:focus,[type="submit"]:active{
  outline:0; 
@@ -4601,7 +4603,7 @@ background:transparent;
  .woocommerce a.button.alt,
  .woocommerce button.button.alt,
   .woocommerce input.button.alt{
-padding: 12px 25px;
+padding: 12px 21px;
     color: #ffffff;
     border-color: #ea4c89;
     background-color: #ea4c89;
@@ -4653,17 +4655,20 @@ border-color: #ea4c89;
 }
 /*on sale badges*/
 .woocommerce ul.products li.product .onsale,.woocommerce span.onsale{
-height:50px;
-width:50px;
-line-height: 50px;
-padding:0;
-text-align: center;
+    height:50px;
+    width:50px;
+    line-height: 50px;
+    padding:0;
+    text-align: center;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     border-radius: 50%;
-        background-color:#ea4c89;
-        z-index:1;
+    background-color:#ea4c89;
+    min-width: initial;
+    min-height: initial;
+    font-weight: initial;
+    z-index:1;
 }
 .woocommerce ul.products li.product .onsale.square,
 .woocommerce span.onsale.square{
