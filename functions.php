@@ -73,8 +73,13 @@ define( 'BEVRO_THEME_SETTINGS', 'bevro-settings' );
 
         // Enqueue editor styles.
         add_editor_style( 'style-editor.css' );
+
+		add_editor_style( 'editor.css' );
+
         // Add support for responsive embedded content.
         add_theme_support( 'responsive-embeds' );
+
+		add_theme_support( 'custom-spacing' );
 		/**
 		 * Add support for core custom logo.
 		 */
@@ -108,6 +113,10 @@ define( 'BEVRO_THEME_SETTINGS', 'bevro-settings' );
             'woocommerce' => array(
                 'name' => esc_html__( 'Woocommerce', 'bevro' ),
                 'active_filename' => 'woocommerce/woocommerce.php',
+            ),
+			'unlimited-blocks' => array(
+                'name' => esc_html__( 'Unlimited blocks For Gutenberg', 'bevro' ),
+                'active_filename' => 'unlimited-blocks/unlimited-blocks.php',
             ),
             'one-click-demo-import' => array(
                 'name' => esc_html__( 'One Click Demo Import', 'bevro' ),

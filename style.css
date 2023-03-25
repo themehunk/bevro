@@ -5,7 +5,7 @@ Theme URI: https://themehunk.com/product/bevro-wordpress-theme/
 Author URI: https://www.themehunk.com
 Description: Bevro is a best multipurpose theme for your project. Best suitable for creating Small Business, Agency, eCommerce, Portfolio sites. It is best Base theme you have ever used. It is compatible with Elementor, Brizy, Beaver, Visual compser etc. Bervo provide full control over header, footer, blog, color& background, Typography, woocommerce and much more. Theme comes with one click Demo import. Facing any difficulty in using theme just contact our support forum: https://www.themehunk.com/support , Check our Demos of Bevro: https://themehunk.com/bevro-wordpress-theme/
 For more information about Bevro please go to : https://themehunk.com
-Version: 1.0.7
+Version: 1.0.8
 Requires at least: 4.5
 Tested up to: 6.1
 Requires PHP: 5.4
@@ -5876,6 +5876,10 @@ margin:0;
 /* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
   outline: 0;
+}
+.theme-bevro .th-product-compare-btn.btn_type.th-added-compare::before, 
+.theme-bevro .th-product-compare-btn.icon_type.th-added-compare::before{
+    display: none;
 }
 @media screen and (max-width:1024px){
 .mhdrleftpan .sider.left{
