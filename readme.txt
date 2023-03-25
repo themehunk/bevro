@@ -1,6 +1,6 @@
 == Theme: Bevro ==
 Contributors: ThemeHunk
-Tags: two-columns, right-sidebar, custom-menu, custom-background, editor-style, translation-ready, full-width-template, flexible-header, sticky-post, theme-options, one-column, e-commerce, blog, photography, threaded-comments, custom-colors
+Tags: wide-blocks, block-patterns, block-styles, editor-style, two-columns, right-sidebar, custom-menu, custom-background, translation-ready, full-width-template, flexible-header, sticky-post, theme-options, one-column, e-commerce, blog, photography, threaded-comments, custom-colors, full-width-template
 Requires at least: 4.9
 Tested up to: 6.1
 Requires PHP: 5.4
