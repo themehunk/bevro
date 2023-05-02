@@ -62,7 +62,7 @@
     display: inline-block;
 }
 .bevro-menu li ul.sub-menu li > a > .arrow:before {
-    content: "\f105" !important;
+    content: "\f105";
 }
 .bevro-menu > li > ul.sub-menu {
     display: none;
@@ -114,7 +114,7 @@
     font-size: 16px;
     font-family: FontAwesome;
     height: auto;
-    content: "\f104";
+    content: "\f105";
     font-weight: 300;
     text-shadow: none;
 }
@@ -748,6 +748,13 @@ display:block;
 /*end hamburger menu*/
 /****************************/
 @media screen and (max-width: 1024px){
+    .bevro-menu li,
+    .bevro-menu a{
+        position: relative;
+    }
+    .bevro-menu li ul.sub-menu li > a > .arrow:before{
+        content: "\f107";
+    }
 .mhdfull .top-header .menu-toggle,
 .mhdfull .bottom-header .menu-toggle{
 display:block!important;
@@ -812,7 +819,7 @@ display: -webkit-inline-box;
     }
     .bevro-menu > li > a > .arrow:before {
         float: right;
-        content: "\f105";
+        content: "\f107";
     }
 .sider.left .bevro-menu > li, .sider.right .bevro-menu > li {
     border-bottom: 1px solid #eee;
@@ -834,7 +841,7 @@ padding-right:15px;
     background: none;
 }
     li.menu-active > a > .arrow:before {
-        content: "\f107" !important;
+        content: "\f106";
     }
     .bevro-menu li ul.sub-menu > li {
         width: 100%;
@@ -855,7 +862,7 @@ padding-right:15px;
         position: static;
     }
     .bevro-menu li ul.sub-menu li.menu-active > a > .arrow:before {
-        content: "\f107" !important;
+        content: "\f106";
     }
   .bevro-menu > li > a,.top-header-bar .bevro-menu > li > a, 
     .bottom-header-bar .bevro-menu > li > a {

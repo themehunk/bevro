@@ -555,7 +555,13 @@ if($settings['bevro-agency']['hide_branding']==''){
                     $plugin_slug = $plugin_info->slug;
                     $version = $plugin_info->version;
                     $author = $plugin_info->author;
-                    $download_link = $plugin_info->download_link;
+                    // $download_link = $plugin_info->download_link;
+                    if (isset($plugin_info->download_link)) {
+                    	$download_link = $plugin_info->download_link;
+                    }
+                   	else{
+                   		$download_link = '';
+                   	}
                    
             
 
@@ -629,6 +635,9 @@ if($settings['bevro-agency']['hide_branding']==''){
                 }elseif($plugin_slug=='business-popup'){
                 	echo'<img src="'.esc_url( BEVRO_THEME_URI . 'lib/theme-option/assets/images/business-popup.png' ).'" />'; 
 				$detail='Business Popup plugin comes with easy to use layouts, You can simply select and add your original content using live editor. Plugin contain layouts for sale, Discount offers, Deals, shop ad etc. You can popup at your desired page, post, Between post and in the widget areas as a banner ad.';
+				}elseif($plugin_slug=='unlimited-blocks'){
+                	echo'<img src="'.esc_url( BEVRO_THEME_URI . 'lib/theme-option/assets/images/unlimited-blocks.png' ).'" />'; 
+				$detail='Unlimited Blocks is the editor blocks that are used to create content layouts that you can insert onto anywhere on your WordPress post or pages.';
 				}	
 			    echo '<p class="rcp-detail">'.esc_html($detail).' </p>';
                 echo '<p class="action-btn plugin-card-'.esc_attr( $plugin_slug ).'">
