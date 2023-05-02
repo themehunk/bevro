@@ -555,7 +555,13 @@ if($settings['bevro-agency']['hide_branding']==''){
                     $plugin_slug = $plugin_info->slug;
                     $version = $plugin_info->version;
                     $author = $plugin_info->author;
-                    $download_link = $plugin_info->download_link;
+                    // $download_link = $plugin_info->download_link;
+                    if (isset($plugin_info->download_link)) {
+                    	$download_link = $plugin_info->download_link;
+                    }
+                   	else{
+                   		$download_link = '';
+                   	}
                    
             
 
