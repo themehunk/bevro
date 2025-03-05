@@ -100,33 +100,52 @@ define( 'BEVRO_THEME_SETTINGS', 'bevro-settings' );
 	    'default-color' => 'f1f1f1',
         );
         add_theme_support( 'custom-background',$args );
-        // Recommend plugins
-        add_theme_support( 'recommend-plugins', array(
-            'elementor' => array(
-                'name' => esc_html__( 'Elementor', 'bevro' ),
-                'active_filename' => 'elementor/elementor.php',
-            ),
-            'contact-form-7' => array(
-                'name' => esc_html__( 'Contact Form 7', 'bevro' ),
-                'active_filename' => 'contact-form-7/wp-contact-form-7.php',
-            ), 
-            'woocommerce' => array(
-                'name' => esc_html__( 'Woocommerce', 'bevro' ),
-                'active_filename' => 'woocommerce/woocommerce.php',
-            ),
-			'unlimited-blocks' => array(
-                'name' => esc_html__( 'Unlimited blocks For Gutenberg', 'bevro' ),
-                'active_filename' => 'unlimited-blocks/unlimited-blocks.php',
-            ),
-            'one-click-demo-import' => array(
-                'name' => esc_html__( 'One Click Demo Import', 'bevro' ),
-                'active_filename' => 'one-click-demo-import/one-click-demo-import.php',
-            ),
-            'business-popup' => array(
-                'name' => esc_html__( 'Business Popup', 'bevro' ),
-                'active_filename' => 'business-popup/business-popup.php',
-            )
-        ) );
+       
+
+		    // Recommend plugins
+			add_theme_support( 'recommend-plugins', array(
+
+				'themehunk-customizer' => array(
+					'name' => esc_html__( 'Themehunk Customizer (Highly Recommended)', 'big-store' ),
+					 'img' => 'icon-128x128.png',
+					'active_filename' => 'themehunk-customizer/themehunk-customizer.php',
+				),
+				'vayu-blocks' => array(
+					'name' => esc_html__( 'Vayu blocks For Gutenberg', 'big-store' ),
+					'img' => 'icon-128x128.png',
+					'active_filename' => 'vayu-blocks/vayu-blocks.php',
+					),
+				'th-advance-product-search' => array(
+				'name' => esc_html__( 'TH Advance Product Search', 'big-store' ),
+				'img' => 'icon-128x128.gif',
+				'active_filename' => 'th-advance-product-search/th-advance-product-search.php',
+				),
+				'th-all-in-one-woo-cart' => array(
+					 'name' => esc_html__( 'TH All In One Woo Cart', 'big-store' ),
+					  'img' => 'icon-128x128.gif',
+					 'active_filename' => 'th-all-in-one-woo-cart/th-all-in-one-woo-cart.php',
+				 ),
+				'th-product-compare' => array(
+					 'name' => esc_html__( 'TH Product Compare', 'big-store' ),
+					  'img' => 'icon-128x128.gif',
+					 'active_filename' => 'th-product-compare/th-product-compare.php',
+				 ),
+				'lead-form-builder' => array(
+					'name' => esc_html__( 'Lead Form Builder', 'big-store' ),
+					 'img' => 'icon-128x128.png',
+					'active_filename' => 'lead-form-builder/lead-form-builder.php',
+				),
+				 'th-variation-swatches' => array(
+					'name' => esc_html__( 'TH Variation Swatches', 'big-store' ),
+					 'img' => 'icon-128x128.gif',
+					'active_filename' => 'th-variation-swatches/th-variation-swatches.php',
+				),
+				'wp-popup-builder' => array(
+					'name' => esc_html__( 'WP Popup Builder – Popup Forms & Newsletter', 'big-store' ),
+					 'img' => 'icon-128x128.png',
+					'active_filename' => 'wp-popup-builder/wp-popup-builder.php',
+				)
+			) );
 	}
 endif;
 add_action( 'after_setup_theme', 'bevro_setup' );

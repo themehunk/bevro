@@ -16,8 +16,9 @@ get_template_part('inc/blog-single-function');
 get_template_part('inc/default-string');
  //theme-option
  if( !function_exists('bevro_pro_body_classes') ){
-get_template_part('lib/theme-option/class-bevro-admin-settings');
-get_template_part('lib/theme-option/theme-option-function');
+// get_template_part('lib/theme-option/class-bevro-admin-settings');
+// get_template_part('lib/theme-option/theme-option-function');
+    get_template_part( 'lib/th-option/th-option');
  }
  //pagination
 get_template_part('inc/pagination/pagination');
