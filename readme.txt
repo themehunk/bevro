@@ -23,7 +23,9 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 == Changelog ==
 
 = 1.1.0 =
-Update : Theme tested with latest WordPress 6.7
+Update : Theme tested with latest WordPress 6.7.
+New: New importer added.
+New: New Theme Option added.
 
 = 1.0.9 =
 Update : Theme tested with latest WordPress 6.2.
@@ -69,8 +71,10 @@ Initial release
 
 == Upgrade Notice ==
 
-= 1.0.9 =
-Update : Theme tested with latest WordPress 6.2.
+= 1.1.0 =
+Update : Theme tested with latest WordPress 6.7.
+New: New importer added.
+New: New Theme Option added.
 
 == Resources ==
  

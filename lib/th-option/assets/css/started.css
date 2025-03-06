@@ -515,6 +515,9 @@ display: flex;
     color:#fff;
     background-color: #000000;
     }
+    .content-wrap a{
+        text-decoration: none;
+    }
 
 @media (min-width: 768px){
 .theme_link {

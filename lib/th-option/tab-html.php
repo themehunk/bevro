@@ -19,7 +19,7 @@ if (!$tabActiveWl && !$tabActiveRp && !$tabActiveImportDc && !$tabActiveGtChild 
         <div class="th-option-top-hdr">
             <div class="col-1">
                 <div class="logo-img">
-                <a target="_blank" href="<?php echo $theme_header['theme_brand_url']; ?>/?wp=big-store" class=""> <span class="logo-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/lib/th-option/assets/images/icon.png"/><?php echo $theme_header['theme_brand']; ?></span></a>
+                <a target="_blank" href="<?php echo $theme_header['theme_brand_url']; ?>/?wp=bevro" class=""> <span class="logo-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/lib/th-option/assets/images/icon.png"/><?php echo $theme_header['theme_brand']; ?></span></a>
             </div>
             </div>
             <div class="col-2">
@@ -28,16 +28,16 @@ if (!$tabActiveWl && !$tabActiveRp && !$tabActiveImportDc && !$tabActiveGtChild 
                     <span><?php echo $theme_header['welcome_desc']; ?></span>
                 </div>
                 <span class="version"><?php echo $theme_header['v']; ?></span>
-                <span><?php echo _e('FREE THEME','big-store'); ?></span>
+                <span><?php echo _e('FREE THEME','bevro'); ?></span>
             </div>
         </div>
         <div class="th-option-bottom-hdr">
-            <a class="tablinks <?php echo esc_attr($tabActiveWl) ?>" onclick="openTab(event, 'Welcome')"><?php _e('Welcome','big-store');?></a>
-            <a class="tablinks <?php echo esc_attr($tabActiveRp) ?>" onclick="openTab(event, 'Recommended-Plugin')"><?php _e('Recommended Plugin','big-store');?> </a>
-            <a class="tablinks <?php echo esc_attr($tabActiveImportDc) ?>" onclick="openTab(event, 'Import-Demo-Content')"><?php _e('Demo Import','big-store');?> </a>
-            <a class="tablinks get-child <?php echo esc_attr($tabActiveGtChild) ?>" onclick="openTab(event, 'Get-Child-Theme')"><?php _e('Get Child Theme','big-store');?></a>
-            <a class="tablinks <?php echo esc_attr($tabActiveFreePRo) ?>" onclick="openTab(event, 'Free-Vs-Pro')"><?php _e('Free Vs Pro','big-store');?></a>
-            <a class="tablinks <?php echo esc_attr($tabActiveHelp) ?>" onclick="openTab(event, 'Help')"><?php _e('Help','big-store');?></a>
+            <a class="tablinks <?php echo esc_attr($tabActiveWl) ?>" onclick="openTab(event, 'Welcome')"><?php _e('Welcome','bevro');?></a>
+            <a class="tablinks <?php echo esc_attr($tabActiveRp) ?>" onclick="openTab(event, 'Recommended-Plugin')"><?php _e('Recommended Plugin','bevro');?> </a>
+            <a class="tablinks <?php echo esc_attr($tabActiveImportDc) ?>" onclick="openTab(event, 'Import-Demo-Content')"><?php _e('Demo Import','bevro');?> </a>
+            <a class="tablinks get-child <?php echo esc_attr($tabActiveGtChild) ?>" onclick="openTab(event, 'Get-Child-Theme')"><?php _e('Get Child Theme','bevro');?></a>
+            <a class="tablinks <?php echo esc_attr($tabActiveFreePRo) ?>" onclick="openTab(event, 'Free-Vs-Pro')"><?php _e('Free Vs Pro','bevro');?></a>
+            <a class="tablinks <?php echo esc_attr($tabActiveHelp) ?>" onclick="openTab(event, 'Help')"><?php _e('Help','bevro');?></a>
 
         </div>
 
@@ -75,10 +75,10 @@ if (!$tabActiveWl && !$tabActiveRp && !$tabActiveImportDc && !$tabActiveGtChild 
                         <img src="<?php echo esc_url(get_template_directory_uri()); ?>/lib/th-option/assets/images/import.png">
                     </div>
                 <div class="title-plugin">
-                <h3><?php _e('Click Here To Import Demo Content','big-store'); ?></h3>
+                <h3><?php _e('Click Here To Import Demo Content','bevro'); ?></h3>
 				 
-				 <p> <?php _e('You need to Install required plugins like- Themehunk Customizer, WooCommerce and One click demo import plugin. After installing required plugins import button will activate.', 'big-store'); ?></p>
-              <a class="button disabled importdemo"><?php _e( 'Import Demo', 'big-store' ); ?></a>
+				 <p> <?php _e('You need to Install required plugins like- Themehunk Customizer, WooCommerce and One click demo import plugin. After installing required plugins import button will activate.', 'bevro'); ?></p>
+              <a class="button disabled importdemo"><?php _e( 'Import Demo', 'bevro' ); ?></a>
 				 
              </div>
 
