@@ -150,7 +150,7 @@ define( 'BEVRO_THEME_SETTINGS', 'bevro-settings' );
 			 // Import Data Content plugins
 			 add_theme_support( 'import-demo-content', array(
 				'themehunk-customizer' => array(
-				   'name' => esc_html__( 'Themehunk Customizer', 'big-store' ),
+				   'name' => esc_html__( 'Themehunk Customizer', 'bevro' ),
 					'img' => 'icon-128x128.png',
 				   'active_filename' => 'themehunk-customizer/themehunk-customizer.php',
 			   ),

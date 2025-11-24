@@ -650,12 +650,7 @@ ob_end_clean();
                   . '<div class="menu-custom-search">'
                   .'<div class="searchfrom">'
                   .'<a href="#" class="search-btn"><i class="fa fa-search"></i></a>'
-                  . '<form role="search" method="get" id="searchform" action="'.esc_url(home_url( '/' )).'">'
-                  .'<div class="form-content">'
-                  .'<input type="text" placeholder="'.esc_attr_x( 'Search', 'placeholder', 'bevro' ).'" name="s" id="s" value=""/>'
-                  .'<input type="submit" value="'.esc_attr_x( 'Search', 'text', 'bevro' ).'" />'
-                  .'</div>'
-                  .'</form>'
+                  . get_search_form()
                   .'</div>'
                   .'</div>'
                   .'</li>';
@@ -716,12 +711,7 @@ ob_end_clean();
           $items .='<div class="menu-custom-search">'
                   .'<div class="searchfrom">'
                   .'<a href="#" class="search-btn"><i class="fa fa-search"></i></a>'
-                  . '<form role="search" method="get" id="searchform" action="'.esc_url(home_url( '/' )).'">'
-                  .'<div class="form-content">'
-                  .'<input type="text" placeholder="'.esc_attr_x( 'Search', 'placeholder', 'bevro' ).'" name="s" id="s" value=""/>'
-                  .'<input type="submit" value="'.esc_attr_x( 'Search', 'text', 'bevro' ).'" />'
-                  .'</div>'
-                  .'</form>'
+                  . get_search_form()
                   .'</div>'
                   .'</div>';
                   return $items;

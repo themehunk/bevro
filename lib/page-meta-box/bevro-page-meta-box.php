@@ -17,128 +17,7 @@ if ( ! function_exists( 'bevro_admin_scripts' ) ) :
 endif;
 add_action( 'admin_enqueue_scripts', 'bevro_admin_scripts' );
 
-$prefix='bevro_';
-if(function_exists('bevro_sticky_page_array')){
-    $sticky_arry = bevro_sticky_page_array($prefix);
-}else{
-    $sticky_arry = null;
 
-}
-$meta_boxes = array(
-      array(
-        'id' => 'bevro-meta-box',
-        'title' => esc_html__('Bevro Setting','bevro'),
-        'pages' => array('page','post','product'),// custom post type array('page','post', 'link')
-        'context' => 'side',
-        'priority' => 'low',
-        'fields' => array(
-            array(
-                'name' => esc_html__('Sidebar','bevro'),
-                'id' => $prefix . 'sidebar_dyn',
-                'type' => 'select',
-                'std' => 'default',
-                'options' => array( 
-                    array("value" => 'default',"name" => esc_html__('Customizer Setting','bevro')),
-                    array("value" => 'left',"name" =>  esc_html__('Left Sidebar','bevro')),
-                    array("value" => 'right',"name" => esc_html__('Right Sidebar','bevro')),
-                	array("value" => 'no-sidebar',"name" => esc_html__('No Sidebar','bevro')),
-                )
-            ),
-            array(
-                'name' => esc_html__('Content Layout','bevro'),
-                'id' => $prefix . 'content_dyn',
-                'type' => 'select',
-                'std' => 'default',
-                'options' => array( 
-                    array("value" => 'default',"name" => esc_html__('Customizer Setting','bevro')),
-                    array("value" => 'boxed',"name" => esc_html__('Boxed','bevro')),
-                    array("value" => 'contentbox',"name" => esc_html__('Content Boxed','bevro')),
-                    array("value" => 'fullwidthcontained',"name" => esc_html__('Full Width/Contained','bevro')),
-                    array("value" => 'fullwidthstrechched',"name" => esc_html__('Full Width/Strectched','bevro')),
-                )
-            ),
-            array(
-                'name' => esc_html__('Disable section','bevro'),
-                'id' => $prefix . 'disable_section_dyn',
-                'type' => '',
-                   
-            ),
-            array(
-                'name' => '',
-                'id' => $prefix . 'disable_above_header_dyn',
-                'type' => 'checkbox',
-                'nameslug' => esc_html__('Disable Above Header','bevro'),
-                   
-            ),
-            array(
-                'name' => '',
-                'id' => $prefix . 'disable_main_header_dyn',
-                'type' => 'checkbox',
-                'nameslug' => esc_html__('Disable Main Header','bevro'),
-                   
-            ),
-            array(
-                'name' => '',
-                'id' => $prefix . 'disable_bottom_header_dyn',
-                'type' => 'checkbox',
-                'nameslug' => esc_html__('Disable Bottom Header','bevro'),
-                   
-            ),
-             array(
-                'name' => '',
-                'id' => $prefix . 'disable_title_dyn',
-                'type' => 'checkbox',
-                'nameslug' => esc_html__('Disable title','bevro'),
-                   
-            ),
-             array(
-                'name' => '',
-                'id' => $prefix . 'disable_feature_image_dyn',
-                'type' => 'checkbox',
-                'nameslug' => esc_html__('Disable Feature Image','bevro'),
-                   
-            ),
-             array(
-                'name' => '',
-                'id' => $prefix . 'disable_above_footer_dyn',
-                'type' => 'checkbox',
-                'nameslug' => esc_html__('Disable Above Footer','bevro'),
-                   
-            ),
-             array(
-                'name' => '',
-                'id' => $prefix . 'disable_footer_widget_dyn',
-                'type' => 'checkbox',
-                'nameslug' => esc_html__('Disable Footer Widget Area','bevro'),
-                   
-            ),
-             array(
-                'name' => '',
-                'id' => $prefix . 'disable_bottom_footer_dyn',
-                'type' => 'checkbox',
-                'nameslug' => esc_html__('Disable Bottom Footer','bevro'),
-                   
-            ),
-            array(
-                'name' => esc_html__('Transparent Header','bevro'),
-                'id' => $prefix . 'transparent_header_dyn',
-                'type' => 'select',
-                'std' => 'default',
-                'options' => array( 
-                    array("value" => 'default',"name"  => esc_html__('Customizer Setting','bevro')),
-                    array("value" => 'enable',"name"   => esc_html__('Enable','bevro')),
-                    array("value" => 'disable',"name"  => esc_html__('Disable','bevro')),
-                )
-            ),
-
-           $sticky_arry
-            
-        )
-    )
-);
-foreach ($meta_boxes as $meta_box){
-    $my_box = new bevro_thMetaDataClass($meta_box);
-}
 class bevro_thMetaDataClass {
  
     protected $_meta_box;
@@ -247,3 +126,129 @@ class bevro_thMetaDataClass {
         }
     }
 }
+
+function bevro_register_meta_boxes(){
+    $prefix='bevro_';
+if(function_exists('bevro_sticky_page_array')){
+    $sticky_arry = bevro_sticky_page_array($prefix);
+}else{
+    $sticky_arry = null;
+
+}
+$meta_boxes = array(
+      array(
+        'id' => 'bevro-meta-box',
+        'title' => esc_html__('Bevro Setting','bevro'),
+        'pages' => array('page','post','product'),// custom post type array('page','post', 'link')
+        'context' => 'side',
+        'priority' => 'low',
+        'fields' => array(
+            array(
+                'name' => esc_html__('Sidebar','bevro'),
+                'id' => $prefix . 'sidebar_dyn',
+                'type' => 'select',
+                'std' => 'default',
+                'options' => array( 
+                    array("value" => 'default',"name" => esc_html__('Customizer Setting','bevro')),
+                    array("value" => 'left',"name" =>  esc_html__('Left Sidebar','bevro')),
+                    array("value" => 'right',"name" => esc_html__('Right Sidebar','bevro')),
+                    array("value" => 'no-sidebar',"name" => esc_html__('No Sidebar','bevro')),
+                )
+            ),
+            array(
+                'name' => esc_html__('Content Layout','bevro'),
+                'id' => $prefix . 'content_dyn',
+                'type' => 'select',
+                'std' => 'default',
+                'options' => array( 
+                    array("value" => 'default',"name" => esc_html__('Customizer Setting','bevro')),
+                    array("value" => 'boxed',"name" => esc_html__('Boxed','bevro')),
+                    array("value" => 'contentbox',"name" => esc_html__('Content Boxed','bevro')),
+                    array("value" => 'fullwidthcontained',"name" => esc_html__('Full Width/Contained','bevro')),
+                    array("value" => 'fullwidthstrechched',"name" => esc_html__('Full Width/Strectched','bevro')),
+                )
+            ),
+            array(
+                'name' => esc_html__('Disable section','bevro'),
+                'id' => $prefix . 'disable_section_dyn',
+                'type' => '',
+                   
+            ),
+            array(
+                'name' => '',
+                'id' => $prefix . 'disable_above_header_dyn',
+                'type' => 'checkbox',
+                'nameslug' => esc_html__('Disable Above Header','bevro'),
+                   
+            ),
+            array(
+                'name' => '',
+                'id' => $prefix . 'disable_main_header_dyn',
+                'type' => 'checkbox',
+                'nameslug' => esc_html__('Disable Main Header','bevro'),
+                   
+            ),
+            array(
+                'name' => '',
+                'id' => $prefix . 'disable_bottom_header_dyn',
+                'type' => 'checkbox',
+                'nameslug' => esc_html__('Disable Bottom Header','bevro'),
+                   
+            ),
+             array(
+                'name' => '',
+                'id' => $prefix . 'disable_title_dyn',
+                'type' => 'checkbox',
+                'nameslug' => esc_html__('Disable title','bevro'),
+                   
+            ),
+             array(
+                'name' => '',
+                'id' => $prefix . 'disable_feature_image_dyn',
+                'type' => 'checkbox',
+                'nameslug' => esc_html__('Disable Feature Image','bevro'),
+                   
+            ),
+             array(
+                'name' => '',
+                'id' => $prefix . 'disable_above_footer_dyn',
+                'type' => 'checkbox',
+                'nameslug' => esc_html__('Disable Above Footer','bevro'),
+                   
+            ),
+             array(
+                'name' => '',
+                'id' => $prefix . 'disable_footer_widget_dyn',
+                'type' => 'checkbox',
+                'nameslug' => esc_html__('Disable Footer Widget Area','bevro'),
+                   
+            ),
+             array(
+                'name' => '',
+                'id' => $prefix . 'disable_bottom_footer_dyn',
+                'type' => 'checkbox',
+                'nameslug' => esc_html__('Disable Bottom Footer','bevro'),
+                   
+            ),
+            array(
+                'name' => esc_html__('Transparent Header','bevro'),
+                'id' => $prefix . 'transparent_header_dyn',
+                'type' => 'select',
+                'std' => 'default',
+                'options' => array( 
+                    array("value" => 'default',"name"  => esc_html__('Customizer Setting','bevro')),
+                    array("value" => 'enable',"name"   => esc_html__('Enable','bevro')),
+                    array("value" => 'disable',"name"  => esc_html__('Disable','bevro')),
+                )
+            ),
+
+           $sticky_arry
+            
+        )
+    )
+);
+foreach ($meta_boxes as $meta_box){
+    $my_box = new bevro_thMetaDataClass($meta_box);
+}
+}
+add_action('init','bevro_register_meta_boxes');
