@@ -143,3 +143,36 @@ if ((is_single() || is_page()) || ((class_exists( 'WooCommerce' ))&&(is_woocomme
 
 // Hook the custom header function into 'zita_header'
 add_action('bevro_header', 'bevro_full_header_markup');
+
+function bevro_full_footer_markup() {
+    
+if ( is_single() || is_page() ){
+$bevro_disable_above_footer_dyn  = get_post_meta( get_the_ID(), 'bevro_disable_above_footer_dyn', true );
+$bevro_disable_footer_widget_dyn = get_post_meta( get_the_ID(), 'bevro_disable_footer_widget_dyn', true ); 
+$bevro_disable_bottom_footer_dyn = get_post_meta( get_the_ID(), 'bevro_disable_bottom_footer_dyn', true ); 
+}else{
+$bevro_disable_above_footer_dyn  ='';
+$bevro_disable_footer_widget_dyn ='';
+$bevro_disable_bottom_footer_dyn ='';
+} ?>
+
+    <footer>
+    <?php if(get_theme_mod('bevro_stick_footer_active')==true){ ?>
+<div class="footer-sticky-icon">
+    <span class="footer-icon">
+    </span>
+</div>
+<?php } ?>
+    <div class="footer-wrap widget-area">
+    <?php 
+        bevro_footer_abv_post_meta($bevro_disable_above_footer_dyn);
+        bevro_footer_widget_post_meta($bevro_disable_footer_widget_dyn);
+        bevro_footer_bottom_post_meta($bevro_disable_bottom_footer_dyn);
+    ?>
+    </div>
+    </footer>
+    <?php
+}
+
+// Hook the custom footer function into 'zita_footer'
+add_action('bevro_footer', 'bevro_full_footer_markup');
